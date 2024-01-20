@@ -1,0 +1,183 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+
+.button-container button,
+.timer-container button {
+  padding: 15px 30px; /* Larger padding for bigger buttons */
+  cursor: pointer;
+  font-size: 20px; /* Larger font size for button text */
+  margin: 5px; /* Add margin around buttons */
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.button-container {
+  margin-top: 20px;
+  font-size: 20px; /* Larger font size for top buttons */
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 120px);
+  grid-template-rows: repeat(4, 120px); /* Change this line to 4 rows */
+  gap: 10px;
+}
+
+.card {
+  width: 120px; /* Or the size of your cards */
+  height: 120px; /* Or the size of your cards */
+  background-size: cover;
+  background-position: center;
+  border: 1px solid transparent; /* Fixed border width with transparent color */
+  box-sizing: border-box; /* Ensure the border width is included in the card's dimensions */
+  /* Add other styles as needed */
+}
+
+
+
+.timer-display-container {
+  font-size: 60px; /* Significantly larger font size for the timer */
+  margin-bottom: 10px;
+}
+
+.timer-container {
+  font-size: 20px; /* Larger font size for timer buttons */
+}
+
+#game-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#score-display {
+  font-size: 40px; /* Larger font size for score */
+  margin: 10px 20px; /* Adjusted margin for spacing */
+  flex-grow: 1; /* Allows the score display to fill the space */
+  text-align: center; /* Centers the score text */
+}
+
+#ready-btn, #end-turn-btn {
+  padding: 10px 20px; /* More padding for better touch targets */
+  margin: 0 10px; /* Space between buttons and score */
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  cursor: pointer; /* Visual cue that these are clickable */
+}
+
+.red-score {
+  color: red;
+}
+
+.blue-score {
+  color: blue;
+}
+
+/* Additional styles for active/highlighted states, if necessary */
+.active {
+  border-color: blue;
+  background-color: lightblue;
+}
+
+
+
+
+.team-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the children horizontally */
+    justify-content: space-between; /* This separates the top and bottom children */
+    height: 100%; /* Match the height to the game board */
+    width: 200px; /* Same width as cards for uniformity */
+    margin: 0 20px;
+    border: 2px solid #000;
+    background-color: #ddd;
+    font-size: 20px; /* Larger font size for team table text */
+}
+
+#red-team {
+  background-color: #ffcccc;
+}
+
+#blue-team {
+  background-color: #ccccff;
+}
+
+#turn {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: red; /* Start with red, and change with JavaScript */
+}
+
+#mode-buttons button {
+    /* Basic styling for buttons */
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+#mode-buttons button.active {
+    /* Highlight effect for the active mode */
+    border-color: blue;
+    background-color: lightblue;
+}
+/* Example style for player lists */
+#red-team-players, #blue-team-players {
+    /* Styles for the player list */
+ /* Or any color you prefer */
+    margin-bottom: 10px; /* Spacing between the player list and input field */
+    padding: 5px;
+    /* Add more styles as needed */
+}
+
+input[type="text"] {
+    width: calc(100% - 20px); /* Adjust input width to fit inside the team-table */
+    margin-bottom: 5px;
+}
+/* Style for individual player names inside the player list */
+.player-list div {
+    font-weight: bold; /* Makes the text bold */
+    font-size: 1.2em; /* Makes the text larger, adjust value as needed */
+    margin: 5px 0; /* Adds some space between player names */
+}
+
+.add-player-section {
+    width: 100%; /* Take the full width of the team table */
+    text-align: center; /* Center the add player elements */
+}
+
+    .add-player-section label {
+        display: block; /* Make the label a block element to take its own line */
+        margin-bottom: 5px; /* Space between label and input */
+    }
+
+    .add-player-section input,
+    .add-player-section button {
+        display: block; /* Make input and button block elements */
+        margin: 5px auto; /* Center block elements with auto margins */
+        width: 90%; /* Adjust the width of input and button to your preference */
+    }
+
+.master {
+    color: #000; /* Gold color for highlighting */
+    background-color: #f8f8f8; /* Black background for contrast */
+    padding: 3px; /* Some padding around the name */
+    border-radius: 5px; /* Rounded corners for visual appeal */
+    margin: 5px 0; /* Maintain some spacing between names */
+}

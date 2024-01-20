@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeNames: Pictures Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="button-container">
+        <button onclick="showRules()">RULES</button>
+        <button onclick="newGame()">NEW GAME</button>
+        <button onclick="showPlayers()">MIX TEAMS</button>
+    </div>
+    <div class="timer-display-container">
+        <div id="mode-buttons">
+            <button id="auto-mode-btn">Automatic Mode</button>
+            <span id="timer">00:00</span>
+            <button id="manual-mode-btn">Manual Mode</button>
+        </div>
+    </div>
+    <div class="timer-container">
+        <button onclick="addTime(120)">+2min</button>
+        <button onclick="addTime(60)">+1min</button>
+        <button onclick="resetTimer()">Reset</button>
+        <button onclick="toggleTimer()">Stop</button>
+    </div>
+    <div id="turn">RED TEAM'S TURN</div>
+    <div id="game-controls">
+        <button id="ready-btn">Ready</button>
+        <div id="score-display">
+            <span id="red-score" class="red-score">0</span> SCORE <span id="blue-score" class="blue-score">0</span>
+        </div>
+        <button id="end-turn-btn">End Turn</button>
+    </div>
+
+    <div class="game-container">
+        <div class="team-table" id="red-team">
+            <div class="team-label" style="background-color: #ffcccc;">Red Team</div>
+            <div class="player-list" id="red-team-players"></div>
+            <div class="add-player-section">
+                Player's name: <input type="text" id="red-player-name" />
+                <button onclick="addPlayer('red')">Add player</button>
+            </div>
+        </div>
+
+        <div id="game-board"></div>
+        <div class="team-table" id="blue-team">
+            <div class="team-label" style="background-color: #ccccff;">Blue Team</div>
+            <div class="player-list" id="blue-team-players"></div>
+            <div class="add-player-section">
+                Player's name: <input type="text" id="blue-player-name" />
+                <button onclick="addPlayer('blue')">Add player</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
