@@ -177,7 +177,7 @@ function generateDeck() {
     imageDeck = [];
     time = 60;
     updateTimerDisplay();
-    for (let i = 1; i <= 81; i++) {
+    for (let i = 1; i <= 100; i++) {
         imageDeck.push(`images/${i}.png`);
     }
     shuffleArray(imageDeck);
